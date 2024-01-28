@@ -1,5 +1,11 @@
 public class SoldadoRuso extends Soldado implements IFuentePoder {
 
+    public SoldadoRuso() {
+        super();  
+        setIdSoldado(getIdSoldado());
+        recargarFuente();
+    }
+
     @Override
     public void recargarFuente() {
         System.out.println("Soldado está recargando la fuente de poder del Exobot...");
