@@ -1,26 +1,13 @@
 import java.security.SecureRandom;
+import java.util.Hashtable;
 
 public abstract class Iabot implements IIngles, IEspanol {
+    
+    Hashtable<Integer,String> jsConocimientoI = new Hashtable<>();
+    Hashtable<Integer,String> jsConocimientoE = new Hashtable<>();
 
     private String idExobot;
-    private String conocimientoIngles;
-    private String conocimientoEspanol;
-
-    public String getConocimientoIngles() {
-        return conocimientoIngles;
-    }
-
-    public void setConocimientoIngles(String conocimientoIngles) {
-        this.conocimientoIngles = conocimientoIngles;
-    }
-
-    public String getConocimientoEspanol() {
-        return conocimientoEspanol;
-    }
-
-    public void setConocimientoEspanol(String conocimientoEspanol) {
-        this.conocimientoEspanol = conocimientoEspanol;
-    }
+    
 
     public String getIdExobot() {
         idExobot = generarCodigo();
@@ -41,36 +28,52 @@ public abstract class Iabot implements IIngles, IEspanol {
         }
         return builder.toString().toUpperCase();
     }
-
     @Override
-    public void aprenderLexicoEspanol() {
-        conocimientoEspanol += " léxico de Español.";
-
+    public String jsaprenderFoneticaIngles( ) {
+        jsConocimientoI.put(1, " Aprendio Fonetica en Ingles");
+        return " Aprendiendo Fonetica en Ingles";
     }
 
     @Override
-    public void aprenderGramaticaEspanol() {
-        conocimientoEspanol += " gramática de Español.";
+    public String jsaprenderGramaticaIngles() {
+        jsConocimientoI.put(2, " Aprendio Gramática en Ingles");
+        return " Aprendiendo Gramática en Ingles";
     }
 
     @Override
-    public void aprenderFoneticaEspanol() {
-        conocimientoEspanol += " fonética de Español.";
+    public String jsaprenderLexicoIngles() {
+        jsConocimientoI.put(3, " Aprendio Lexico en Ingles");
+        return " Aprendiendo Lexico en Ingles";
     }
 
     @Override
-    public void aprenderLexicoIngles() {
-        conocimientoIngles += " léxico de Inglés.";
+    public String jsaprenderFoneticaEspanol() {
+        jsConocimientoE.put(1, " Aprendio Fonetica en Español");
+        return " Aprendiendo Fonetica en Español ";
     }
 
     @Override
-    public void aprenderGramaticaIngles() {
-        conocimientoIngles += " gramática de Inglés.";
+    public String jsaprenderGramaticaEspanol() {
+        jsConocimientoE.put(2, " Aprendio Gramaticaen Español");
+        return " Aprendiendo Gramatica en Español";
     }
-
     @Override
-    public void aprenderFoneticaIngles() {
-        conocimientoIngles += " fonética de Inglés.";
+    public String jsaprenderLexicoEspanol() {
+        jsConocimientoE.put(3, " Aprendio Lexico en Español");
+        return " Aprendiendo Lexico en español";
     }
-
+    public void jsConocimientoIngles(){
+  
+        jsConocimientoI.forEach((k, v) -> {
+            System.out.println(v);
+        });
+    }
+    public void jsConocimientoEspanol(){
+    
+        jsConocimientoE.forEach((k, v) -> {
+            System.out.println(v);
+        });
+    }
 }
+
+
