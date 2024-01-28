@@ -1,8 +1,8 @@
-public class SoldadoRuso extends Soldado implements IFuentePoder {
+public class LESoldadoRuso extends LESoldado implements IFuentePoder {
 
-    public SoldadoRuso() {
+    public LESoldadoRuso() {
         super();  
-        setIdSoldado(getIdSoldado());
+        setLeIdSoldado(getLeIdSoldado());
         recargarFuente();
     }
 

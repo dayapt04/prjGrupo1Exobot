@@ -4,15 +4,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Mecatronico {
-    private SoldadoRuso soldado;
+    private LESoldadoRuso soldado;
     private Exobot exobot;
     Scanner sc = new Scanner(System.in);
 
-    public SoldadoRuso getSoldado() {
+    public LESoldadoRuso getSoldado() {
         return soldado;
     }
 
-    public void setSoldado(SoldadoRuso soldado) {
+    public void setSoldado(LESoldadoRuso soldado) {
         this.soldado = soldado;
     }
 
@@ -24,7 +24,7 @@ public class Mecatronico {
         this.exobot = exobot;
     }
 
-    public void asignarExobot(SoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
+    public void asignarExobot(LESoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
         String fileCSV = "dataFile\\asignacionExobot.csv";
         try {
             FileWriter fileWriter = new FileWriter(fileCSV, true);
