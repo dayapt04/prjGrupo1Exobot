@@ -67,7 +67,7 @@ public class Mecatronico {
                     System.out.println(BLANCO+"Armas disponibles para elegir:");
                     System.out.println(AZUL+"1. ARMA LÁSER");
                     System.out.println(ROJO+"2. LANZA FUEGO");
-                    System.out.print(ROSA+"Ingrese una opción: "+RESET);
+                    System.out.println(ROSA+"Ingrese una opción: "+RESET);
                     String optionDer = sc.nextLine();
                     if (optionDer == "1") {
                         System.out.println(

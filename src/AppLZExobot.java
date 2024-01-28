@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AppExobot {
+public class AppLZExobot {
     public static final String ROJO = "\033[38;5;196m";
     public static final String ROJOD = "\033[38;5;160m";
     public static final String AZUL = "\033[38;5;20m";
@@ -15,7 +15,7 @@ public class AppExobot {
     Scanner sc = new Scanner(System.in);
     private Exobot exobot;
 
-    public void AppPrincipalExobot(){
+    public void LZAppPrincipalExobot(){
         int opcion, opcion2;
         SoldadoRuso soldadoRuso = new SoldadoRuso();
         Mecatronico mecha = new Mecatronico();
@@ -44,7 +44,7 @@ public class AppExobot {
                         opcion2 = sc.nextInt();
                         switch (opcion2) {
                             case 1:
-                                mecha.personalizarExobot(exobot, exobot.generarCodigo());
+                                mecha.personalizarExobot(exobot, "ASDQ31");
                                 break;
                             case 2:
                                 soldadoRuso.recargarFuente();
