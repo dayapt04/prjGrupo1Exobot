@@ -18,13 +18,13 @@ public abstract class Soldado {
         this.pierna = pierna;
     }
 
-    private String idSoladado;
+    private String idSoldado;
 
-    public String getIdSoladado() {
-        return idSoladado;
+    public String getIdSoldado() {
+        return idSoldado;
     }
 
-    public void setIdSoladado(String idSoladado) {
-        this.idSoladado = idSoladado;
+    public void setIdSoldado(String idSoldado) {
+        this.idSoldado = idSoldado;
     }
 }
