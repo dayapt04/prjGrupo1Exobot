@@ -1,4 +1,4 @@
-public interface IIngles {
+public interface JSIIngles {
     public void aprenderLexicoIngles();
 
     public void aprenderGramaticaIngles();

@@ -1,4 +1,4 @@
-public interface IEspanol {
+public interface JSIEspanol {
 
     public void aprenderLexicoEspanol();
 

@@ -1,4 +1,4 @@
-public class Exobot extends Iabot {
+public class Exobot extends JSIabot {
     public PABrazoDerecho bDerecho;
     public PABrazoIzquierdo bIzquierdo;
     public PAExtremidadInferior eInferior;
@@ -17,39 +17,21 @@ public class Exobot extends Iabot {
     }
 
     @Override
-    public void aprenderFoneticaEspanol() {
-        super.aprenderFoneticaEspanol();
-        System.out.println("Exobot aprendiendo fonética en español");
-    }
-
-    @Override
-    public void aprenderFoneticaIngles() {
-        super.aprenderFoneticaIngles();
-        System.out.println("Exobot aprendiendo fonética en inglés");
-    }
-
-    @Override
-    public void aprenderGramaticaEspanol() {
-        super.aprenderGramaticaEspanol();
-        System.out.println("Exobot aprendiendo gramática en español");
+    public void aprenderLexicoIngles() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aprenderLexicoIngles'");
     }
 
     @Override
     public void aprenderGramaticaIngles() {
-        super.aprenderGramaticaIngles();
-        System.out.println("Exobot aprendiendo gramática en inglés");
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aprenderGramaticaIngles'");
     }
 
     @Override
-    public void aprenderLexicoEspanol() {
-        super.aprenderLexicoEspanol();
-        System.out.println("Exobot aprendiendo léxico en español");
-    }
-
-    @Override
-    public void aprenderLexicoIngles() {
-        super.aprenderLexicoIngles();
-        System.out.println("Exobot aprendiendo léxico en inglés");
+    public void aprenderFoneticaIngles() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aprenderFoneticaIngles'");
     }
 
 }
