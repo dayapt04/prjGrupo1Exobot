@@ -1,18 +1,18 @@
-public class BrazoDerecho {
+public class PABrazoDerecho {
 
-    private MK61 metralleta;
-    private BAntiataque bazuca;
+    private PAMK61 paMetralleta;
+    private PABAntiataque paBazuca;
 
-    public void agregarMK61(MK61 metraMk61) {
-        this.metralleta = metraMk61;
+    public void agregarMK61(PAMK61 metraMk61) {
+        this.paMetralleta = metraMk61;
         if (metraMk61 != null)
             System.out.println("La metralleta ha sido correctamente agregada al brazo derecho del Exobot.");
         else
             System.out.println("No existe una metralleta MK61 diponible para agregarla al arsenal.");
     }
 
-    public void agregarBazucaAntiataque(BAntiataque bA) {
-        this.bazuca = bA;
+    public void agregarBazucaAntiataque(PABAntiataque bA) {
+        this.paBazuca = bA;
         if (bA != null)
             System.out.println("La bazuca antiataque ha sido correctamente agregada al brazo derecho del Exobot.");
         else

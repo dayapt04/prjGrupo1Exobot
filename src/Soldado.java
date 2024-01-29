@@ -1,20 +1,20 @@
 public abstract class Soldado {
-    private Extremidad brazo;
-    private Extremidad pierna;
+    private PAExtremidad brazo;
+    private PAExtremidad pierna;
 
-    public Extremidad getBrazo() {
+    public PAExtremidad getBrazo() {
         return brazo;
     }
 
-    public void setBrazo(Extremidad brazo) {
+    public void setBrazo(PAExtremidad brazo) {
         this.brazo = brazo;
     }
 
-    public Extremidad getPierna() {
+    public PAExtremidad getPierna() {
         return pierna;
     }
 
-    public void setPierna(Extremidad pierna) {
+    public void setPierna(PAExtremidad pierna) {
         this.pierna = pierna;
     }
 

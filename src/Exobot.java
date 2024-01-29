@@ -1,8 +1,8 @@
 public class Exobot extends Iabot {
-    public BrazoDerecho bDerecho;
-    public BrazoIzquierdo bIzquierdo;
-    public ExtremidadInferior eInferior;
-    public Turbo turbo;
+    public PABrazoDerecho bDerecho;
+    public PABrazoIzquierdo bIzquierdo;
+    public PAExtremidadInferior eInferior;
+    public PATurbo turbo;
 
     @Override
     public String generarCodigo() {
@@ -10,10 +10,10 @@ public class Exobot extends Iabot {
     }
 
     public Exobot() {
-        bDerecho = new BrazoDerecho();
-        bIzquierdo = new BrazoIzquierdo();
-        eInferior = new ExtremidadInferior();
-        turbo = new Turbo();
+        bDerecho = new PABrazoDerecho();
+        bIzquierdo = new PABrazoIzquierdo();
+        eInferior = new PAExtremidadInferior();
+        turbo = new PATurbo();
     }
 
     @Override

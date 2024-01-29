@@ -1,4 +1,4 @@
-public class Turbo {
+public class PATurbo {
 
     public void volar() {
         System.out.println("Activando el turbo del Exobot...");
