@@ -1,9 +1,9 @@
 public interface JSIEspanol {
 
-    public void aprenderLexicoEspanol();
+    public String jsaprenderLexicoEspanol();
 
-    public void aprenderGramaticaEspanol();
+    public String jsaprenderGramaticaEspanol();
 
-    public void aprenderFoneticaEspanol();
+    public String jsaprenderFoneticaEspanol();
 
 }

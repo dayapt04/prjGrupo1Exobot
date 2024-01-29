@@ -16,22 +16,4 @@ public class Exobot extends JSIabot {
         turbo = new PATurbo();
     }
 
-    @Override
-    public void aprenderLexicoIngles() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'aprenderLexicoIngles'");
-    }
-
-    @Override
-    public void aprenderGramaticaIngles() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'aprenderGramaticaIngles'");
-    }
-
-    @Override
-    public void aprenderFoneticaIngles() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'aprenderFoneticaIngles'");
-    }
-
 }

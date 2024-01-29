@@ -1,8 +1,8 @@
 public interface JSIIngles {
-    public void aprenderLexicoIngles();
+    public String jsaprenderLexicoIngles();
 
-    public void aprenderGramaticaIngles();
+    public String jsaprenderGramaticaIngles();
 
-    public void aprenderFoneticaIngles();
+    public String jsaprenderFoneticaIngles();
 
 }
