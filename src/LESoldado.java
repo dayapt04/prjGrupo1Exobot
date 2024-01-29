@@ -1,4 +1,4 @@
-public abstract class Soldado {
+public abstract class LESoldado {
     private PAExtremidad brazo;
     private PAExtremidad pierna;
 

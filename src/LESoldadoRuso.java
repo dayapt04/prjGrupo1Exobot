@@ -1,4 +1,4 @@
-public class SoldadoRuso extends Soldado implements PAIFuentePoder {
+public class LESoldadoRuso extends LESoldado implements PAIFuentePoder {
 
     @Override
     public void paRecargarFuente() {
