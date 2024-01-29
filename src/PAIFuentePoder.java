@@ -1,6 +1,6 @@
 public interface PAIFuentePoder {
 
-    public void recargarFuente();
+    public void paRecargarFuente();
 
-    public void reemplazarFuente();
+    public void paReemplazarFuente();
 }

@@ -1,30 +1,31 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PAMecatronico {
-    private SoldadoRuso soldado;
-    private Exobot exobot;
+    private SoldadoRuso paSoldado;
+    private Exobot paExobot;
     Scanner sc = new Scanner(System.in);
 
     public SoldadoRuso getSoldado() {
-        return soldado;
+        return paSoldado;
     }
 
-    public void setSoldado(SoldadoRuso soldado) {
-        this.soldado = soldado;
+    public void setSoldado(SoldadoRuso paSoldado) {
+        this.paSoldado = paSoldado;
     }
 
     public Exobot getExobot() {
-        return exobot;
+        return paExobot;
     }
 
-    public void setExobot(Exobot exobot) {
-        this.exobot = exobot;
+    public void setExobot(Exobot paExobot) {
+        this.paExobot = paExobot;
     }
 
-    public void asignarExobot(SoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
+    public void paAsignarExobot(SoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
         String fileCSV = "dataFile\\asignacionExobot.csv";
         try {
             FileWriter fileWriter = new FileWriter(fileCSV, true);
@@ -37,60 +38,98 @@ public class PAMecatronico {
         }
     }
 
-    public void armarExobot() {
+    public void paArmarExobot() {
         System.out.println("El mecatrónico está armando el [EXOBOT]...");
     }
 
-    public void personalizarExobot(Exobot exobot, String idExobot) {
+    public void paPersonalizarExobot(Exobot exobot, String idExobot, PABrazoDerecho bDere, PABrazoIzquierdo bIzq,
+            PAArmaLaser laser, PABAntiataque bazuca, PAMK61 metralleta, PALanzafuego lfuego) {
         System.out.println("\n");
-        int bucle = 0;
+        int paBucle = 0;
+        boolean paElegidoIzq = false;
+        boolean paElegidoDer = false;
         do {
-            System.out.println("PERSONALIZAR [E X O B O T]");
-            System.out.println("1. Elegir Arsenal Brazo Derecho");
-            System.out.println("2. Elegir Arsenal Brazo Izquierdo");
-            System.out.print("Ingrese una opción: ");
-            int option = sc.nextInt();
-            switch (option) {
-                case 1: {
-                    System.out.println("Armas disponibles para elegir:");
-                    System.out.println("1. ARMA LÁSER");
-                    System.out.println("2. LANZA FUEGO");
-                    System.out.print("Ingrese una opción: ");
-                    String optionDer = sc.nextLine();
-                    if (optionDer == "1") {
-                        System.out.println(
-                                "Al exobot " + idExobot + "se le ha añadido un Arma Láser a su brazo derecho.");
-                    } else if (optionDer == "2") {
-                        System.out.println(
-                                "Al exobot " + idExobot + "se le ha añadido un Lanza Fuego a su brazo derecho.");
-                    } else {
-                        System.out.println("La opción no es válida, inténtelo nuevamente.");
-                        return;
+            try {
+                System.out.println("\n");
+                System.out.println("\tPERSONALIZAR [E X O B O T]\n");
+                System.out.println("1. Elegir Arsenal Brazo Izquierdo");
+                System.out.println("2. Elegir Arsenal Brazo Derecho");
+                System.out.println("3. Regresar al menú principal");
+                System.out.print("Ingrese una opción: ");
+                int paOption = sc.nextInt();
+                sc.nextLine();
+                switch (paOption) {
+                    case 1: {
+                        if (paElegidoIzq) {
+                            System.out.println("Ya ha elegido el arma izquierda.");
+                            break;
+                        } else {
+                            System.out.println("\n");
+                            System.out.println("Armas disponibles para elegir:");
+                            System.out.println("a. ARMA LÁSER");
+                            System.out.println("b. LANZA FUEGO");
+                            System.out.print("Ingrese una opción: ");
+                            String optionIzq = sc.nextLine();
+
+                            if (optionIzq.equals("a")) {
+                                System.out.println(
+                                        "[E X O B O T]: " + idExobot + "\n");
+                                bIzq.paAgregarArmaLaser(laser);
+                                paElegidoIzq = true;
+                            } else if (optionIzq.equals("b")) {
+                                System.out.println(
+                                        "[E X O B O T]: " + idExobot + "\n");
+                                bIzq.paAgregarLanzafuego(lfuego);
+                                paElegidoIzq = true;
+                            } else {
+                                System.out.println("La opción no es válida, inténtelo nuevamente.\n");
+                                paOption = 4;
+                            }
+                        }
+                        break;
                     }
-                    break;
-                }
-                case 2: {
-                    System.out.println("Armas disponibles para elegir:");
-                    System.out.println("1. MK61 VULCAN");
-                    System.out.println("2. BAZUCA ANTIATAQUE");
-                    System.out.print("Ingrese una opción: ");
-                    String optionDer = sc.nextLine();
-                    if (optionDer == "1") {
-                        System.out.println(
-                                "Al exobot " + idExobot + " se le ha añadido un MK61 Vulcan a su brazo izquierdo.");
-                    } else if (optionDer == "2") {
-                        System.out.println("Al exobot " + idExobot
-                                + " se le ha añadido una Bazuca Antiataque a su brazo izquierdo.");
-                    } else {
-                        System.out.println("La opción no es válida, inténtelo nuevamente.");
-                        return;
+                    case 2: {
+                        if (paElegidoDer) {
+                            System.out.println("Ya ha elegido el arma derecha.");
+                            break;
+                        } else {
+                            System.out.println("\n");
+                            System.out.println("Armas disponibles para elegir:");
+                            System.out.println("a. MK61 VULCAN");
+                            System.out.println("b. BAZUCA ANTIATAQUE");
+                            System.out.print("Ingrese una opción: ");
+                            String optionDer = sc.nextLine();
+                            if (optionDer.equals("a")) {
+                                System.out.println(
+                                        "[E X O B O T]: " + idExobot + "\n");
+                                bDere.agregarMK61(metralleta);
+                                paElegidoDer = true;
+                            } else if (optionDer.equals("b")) {
+                                System.out.println(
+                                        "[E X O B O T]: " + idExobot + "\n");
+                                bDere.agregarBazucaAntiataque(bazuca);
+                                paElegidoDer = true;
+                            } else {
+                                System.out.println("La opción no es válida, inténtelo nuevamente.\n");
+                                paOption = 4;
+                            }
+                        }
+                        break;
                     }
-                    break;
+                    case 3: {
+                        System.out.println("Regresando...");
+                        paBucle = 1;
+                        break;
+                    }
+                    default:
+                        System.out.println("La opción no es válida, inténtelo de nuevo.\n");
+                        break;
                 }
-                default:
-                    System.out.println("La opción no es válida, inténtelo de nuevo.");
-                    break;
+            } catch (InputMismatchException e) {
+                System.err.println("Error: Ingrese un número entero válido.");
+                sc.nextLine();
+                paBucle = 0;
             }
-        } while (bucle != 1);
+        } while (paBucle != 1);
     }
 }
