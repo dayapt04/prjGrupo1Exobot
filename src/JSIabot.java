@@ -1,13 +1,12 @@
 import java.security.SecureRandom;
 import java.util.Hashtable;
 
-public abstract class Iabot implements IIngles, IEspanol {
-    
-    Hashtable<Integer,String> jsConocimientoI = new Hashtable<>();
-    Hashtable<Integer,String> jsConocimientoE = new Hashtable<>();
+public abstract class Iabot implements JSIIngles, JSIEspanol {
+
+    Hashtable<Integer, String> jsConocimientoI = new Hashtable<>();
+    Hashtable<Integer, String> jsConocimientoE = new Hashtable<>();
 
     private String idExobot;
-    
 
     public String getIdExobot() {
         idExobot = generarCodigo();
@@ -28,8 +27,9 @@ public abstract class Iabot implements IIngles, IEspanol {
         }
         return builder.toString().toUpperCase();
     }
+
     @Override
-    public String jsaprenderFoneticaIngles( ) {
+    public String jsaprenderFoneticaIngles() {
         jsConocimientoI.put(1, " Aprendio Fonetica en Ingles");
         return " Aprendiendo Fonetica en Ingles";
     }
@@ -57,23 +57,24 @@ public abstract class Iabot implements IIngles, IEspanol {
         jsConocimientoE.put(2, " Aprendio Gramaticaen Español");
         return " Aprendiendo Gramatica en Español";
     }
+
     @Override
     public String jsaprenderLexicoEspanol() {
         jsConocimientoE.put(3, " Aprendio Lexico en Español");
         return " Aprendiendo Lexico en español";
     }
-    public void jsConocimientoIngles(){
-  
+
+    public void jsConocimientoIngles() {
+
         jsConocimientoI.forEach((k, v) -> {
             System.out.println(v);
         });
     }
-    public void jsConocimientoEspanol(){
-    
+
+    public void jsConocimientoEspanol() {
+
         jsConocimientoE.forEach((k, v) -> {
             System.out.println(v);
         });
     }
 }
-
-

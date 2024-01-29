@@ -1,4 +1,4 @@
-public interface IIngles {
+public interface JSIIngles {
     public String jsaprenderLexicoIngles();
 
     public String jsaprenderGramaticaIngles();
