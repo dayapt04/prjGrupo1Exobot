@@ -13,7 +13,9 @@ public class AppLZExobot {
     public static final String GREENC = "\033[38;5;76m";
     public static final String RESET = "\u001B[0m";
 
-    private static JSExobot exobot = new JSExobot();
+    private static PATurbo turboExoBot = new PATurbo();
+    private static JSExobot exobot = new JSExobot(turboExoBot);
+
     private static PABrazoDerecho bder = new PABrazoDerecho();
     private static PABrazoIzquierdo bizq = new PABrazoIzquierdo();
     private static PAArmaLaser laser = new PAArmaLaser();
@@ -25,12 +27,13 @@ public class AppLZExobot {
 
     public void LZAppPrincipalExobot() {
         int opcion, opcion2;
+
         LESoldadoRuso soldadoRuso = new LESoldadoRuso();
         PAMecatronico oMecatronico = new PAMecatronico();
 
         do {
             System.out.println("--------------------------------------------");
-            System.out.println(BLANCO + "      Bienvenido a ExoBot" + RESET);
+            System.out.println( "      Bienvenido a ExoBot" );
             System.out.println("--------------------------------------------");
             System.out.println(AZUL + "1. Mostrar datos del Soldado" + ROJO + "\n2. Salir " + ROSA
             + "\nIngrese una opción:" + RESET);
@@ -46,12 +49,13 @@ public class AppLZExobot {
                 System.out.println("***************************************************************");
                 System.out.println();
                 oMecatronico.paAsignarExobot(soldadoRuso, soldadoRuso.getLeIdSoldado(), exobot);
+
                 oMecatronico.paArmarExobot();
                 System.out.println();
                 
                 do {
                     System.out.println("----------------");
-                    System.out.println(BLANCO + "[E X O B O T]");
+                    System.out.println( " [E X O B O T]");
                     System.out.println("----------------");
                         System.out.println(GRIS + "1. Personalizar Exobot" + AZUL + "\n2. Recargar Fuente" + AZULD
                                 + "\n3. Reemplazar Fuente" + ROJO + "\n4. Aprender un idioma" + ROJOD + "\n5. Salir");

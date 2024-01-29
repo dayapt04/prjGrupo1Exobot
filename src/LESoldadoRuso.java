@@ -3,6 +3,7 @@ public class LESoldadoRuso extends LESoldado implements PAIFuentePoder {
     public LESoldadoRuso() {
         super();
         setLeIdSoldado(getLeIdSoldado());
+
     }
 
     @Override
@@ -15,4 +16,10 @@ public class LESoldadoRuso extends LESoldado implements PAIFuentePoder {
         System.out.println(" -> Soldado está reemplazando la fuente de poder del Exobot...");
     }
 
+    public void agregarExoBot(){
+        System.out.println(" -> El soldado Ruso  ha incorporado a su equipo un nuevo exobot.");
+    }
+    public void inicializarExobot(){
+        System.out.println(" -> El soldado ha iniciado el exobot.");
+    }
 }

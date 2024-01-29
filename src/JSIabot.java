@@ -1,10 +1,6 @@
 import java.security.SecureRandom;
-import java.util.Hashtable;
 
-public abstract class JSIabot implements JSIIngles, JSIEspanol {
-
-    Hashtable<Integer, String> jsConocimientoI = new Hashtable<>();
-    Hashtable<Integer, String> jsConocimientoE = new Hashtable<>();
+public abstract class JSIabot {
 
     private String idExobot;
 
@@ -27,54 +23,10 @@ public abstract class JSIabot implements JSIIngles, JSIEspanol {
         }
         return builder.toString().toUpperCase();
     }
+    //----------
+    public void aprenderIngles(){}
 
-    @Override
-    public String jsaprenderFoneticaIngles() {
-        jsConocimientoI.put(1, " Aprendió fonética en inglés");
-        return " Aprendiendo fonética en Ingles";
-    }
+    public void aprenderEspanol(){}
+    //--------
 
-    @Override
-    public String jsaprenderGramaticaIngles() {
-        jsConocimientoI.put(2, " Aprendió gramática en inglés");
-        return " Aprendiendo gramática en Ingles";
-    }
-
-    @Override
-    public String jsaprenderLexicoIngles() {
-        jsConocimientoI.put(3, " Aprendió léxico en inglés");
-        return " Aprendiendo léxico en Ingles";
-    }
-
-    @Override
-    public String jsaprenderFoneticaEspanol() {
-        jsConocimientoE.put(1, " Aprendió fonética en Español");
-        return " Aprendiendo fonética en Español ";
-    }
-
-    @Override
-    public String jsaprenderGramaticaEspanol() {
-        jsConocimientoE.put(2, " Aprendió gramática en Español");
-        return " Aprendiendo gramática en Español";
-    }
-
-    @Override
-    public String jsaprenderLexicoEspanol() {
-        jsConocimientoE.put(3, " Aprendió léxico en Español");
-        return " Aprendiendo léxico en Español";
-    }
-
-    public void jsConocimientoIngles() {
-
-        jsConocimientoI.forEach((k, v) -> {
-            System.out.println(v);
-        });
-    }
-
-    public void jsConocimientoEspanol() {
-
-        jsConocimientoE.forEach((k, v) -> {
-            System.out.println(v);
-        });
-    }
 }

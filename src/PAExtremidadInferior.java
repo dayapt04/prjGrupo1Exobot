@@ -1,7 +1,7 @@
 public class PAExtremidadInferior {
 
     public void paCorrer(int velocidad) {
-        System.out.println("[EXOBOT -> POTENCIAR EXTREMIDADES INFERIORES]");
+        System.out.println("[ EXOBOT -> POTENCIAR EXTREMIDADES INFERIORES ]");
         if (velocidad >= 1 && velocidad <= 200)
             System.out
                     .println("El soldado está corriendo a una velocidad de " + velocidad + "km/h gracias al [EXOBOT].");
@@ -10,7 +10,7 @@ public class PAExtremidadInferior {
     }
 
     public void paSaltar(int metro) {
-        System.out.println("[EXOBOT -> POTENCIAR EXTREMIDADES INFERIORES]");
+        System.out.println("[ EXOBOT -> POTENCIAR EXTREMIDADES INFERIORES ]");
         if (metro >= 1 && metro <= 50)
             System.out.println("El soldado salta una altura de " + metro + "metros gracias al [EXOBOT].");
         else
