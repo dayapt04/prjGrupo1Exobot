@@ -1,5 +1,11 @@
 public class LESoldadoRuso extends LESoldado implements PAIFuentePoder {
 
+    public LESoldadoRuso() {
+        super();
+        setLeIdSoldado(getLeIdSoldado());
+        paRecargarFuente();
+    }
+
     @Override
     public void paRecargarFuente() {
         System.out.println("Soldado está recargando la fuente de poder del Exobot...");
