@@ -1,4 +1,4 @@
-public class Exobot extends JSIabot {
+public class JSExobot extends JSIabot {
     public PABrazoDerecho bDerecho;
     public PABrazoIzquierdo bIzquierdo;
     public PAExtremidadInferior eInferior;
@@ -9,7 +9,7 @@ public class Exobot extends JSIabot {
         return super.generarCodigo();
     }
 
-    public Exobot() {
+    public JSExobot() {
         bDerecho = new PABrazoDerecho();
         bIzquierdo = new PABrazoIzquierdo();
         eInferior = new PAExtremidadInferior();

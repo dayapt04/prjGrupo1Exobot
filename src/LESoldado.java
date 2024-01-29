@@ -51,7 +51,6 @@ public abstract class LESoldado {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCSV, true))) {
             writer.write("id:" + this.leIdSoldado);
             writer.newLine();
-            System.out.println(" -> Datos guardados correctamente.");
         } catch (IOException e) {
             System.err.println("ERROR: Al guardar los datos. ");
         }

@@ -5,8 +5,20 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PAMecatronico {
+    public static final String ROJO = "\033[38;5;196m";
+    public static final String ROJOD = "\033[38;5;160m";
+    public static final String AZUL = "\033[38;5;20m";
+    public static final String AZULD = "\033[38;5;21m";
+    public static final String BLANCO = "\033[38;5;15m";
+    public static final String GRIS = "\033[38;5;255m";
+    public static final String ROSA = "\033[38;5;205m";
+    public static final String VIOLETA = "\033[38;5;177m";
+    public static final String TURQUESA = "\033[38;5;43m";
+    public static final String GREENC = "\033[38;5;76m";
+    public static final String RESET = "\u001B[0m";
+
     private LESoldadoRuso paSoldado;
-    private Exobot paExobot;
+    private JSExobot paExobot;
     Scanner sc = new Scanner(System.in);
 
     public LESoldadoRuso getSoldado() {
@@ -17,15 +29,15 @@ public class PAMecatronico {
         this.paSoldado = paSoldado;
     }
 
-    public Exobot getExobot() {
+    public JSExobot getExobot() {
         return paExobot;
     }
 
-    public void setExobot(Exobot paExobot) {
+    public void setExobot(JSExobot paExobot) {
         this.paExobot = paExobot;
     }
 
-    public void paAsignarExobot(LESoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
+    public void paAsignarExobot(LESoldadoRuso soldadoAsig, String idSoldado, JSExobot exobot) {
         String fileCSV = "dataFile\\asignacionExobot.csv";
         try {
             FileWriter fileWriter = new FileWriter(fileCSV, true);
@@ -34,15 +46,15 @@ public class PAMecatronico {
             bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (IOException e) {
-            System.err.println("Error al manipular el archivo " + fileCSV + ": " + e.getMessage());
+            System.err.println(ROJOD+"Error al manipular el archivo " + fileCSV + ": " + ROJOD+e.getMessage()+RESET);
         }
     }
 
     public void paArmarExobot() {
-        System.out.println("El mecatrónico está armando el [EXOBOT]...");
+        System.out.println(GREENC+"El mecatrónico está armando el [EXOBOT]..."+RESET);
     }
 
-    public void paPersonalizarExobot(Exobot exobot, String idExobot, PABrazoDerecho bDere, PABrazoIzquierdo bIzq,
+    public void paPersonalizarExobot(JSExobot exobot, String idExobot, PABrazoDerecho bDere, PABrazoIzquierdo bIzq,
             PAArmaLaser laser, PABAntiataque bazuca, PAMK61 metralleta, PALanzafuego lfuego) {
         System.out.println("\n");
         int paBucle = 0;
@@ -51,24 +63,24 @@ public class PAMecatronico {
         do {
             try {
                 System.out.println("\n");
-                System.out.println("\tPERSONALIZAR [E X O B O T]\n");
-                System.out.println("1. Elegir Arsenal Brazo Izquierdo");
-                System.out.println("2. Elegir Arsenal Brazo Derecho");
-                System.out.println("3. Regresar al menú principal");
-                System.out.print("Ingrese una opción: ");
+                System.out.println(BLANCO+"\tPERSONALIZAR [E X O B O T]\n");
+                System.out.println(AZUL+"1. Elegir Arsenal Brazo Derecho");
+                System.out.println(ROJO+"2. Elegir Arsenal Brazo Izquierdo");
+                System.out.println(ROJOD+"3. Regresar al menú principal");
+                System.out.print(ROSA+"Ingrese una opción: "+RESET);
                 int paOption = sc.nextInt();
                 sc.nextLine();
                 switch (paOption) {
                     case 1: {
                         if (paElegidoIzq) {
-                            System.out.println("Ya ha elegido el arma izquierda.");
+                            System.out.println(GREENC+"Ya ha elegido el arma izquierda."+RESET);
                             break;
                         } else {
                             System.out.println("\n");
-                            System.out.println("Armas disponibles para elegir:");
-                            System.out.println("a. ARMA LÁSER");
-                            System.out.println("b. LANZA FUEGO");
-                            System.out.print("Ingrese una opción: ");
+                            System.out.println(BLANCO+"Armas disponibles para elegir:");
+                            System.out.println(AZUL+"a. ARMA LÁSER");
+                            System.out.println(ROJO+"b. LANZA FUEGO");
+                            System.out.print(ROSA+"Ingrese una opción: "+RESET);
                             String optionIzq = sc.nextLine();
 
                             if (optionIzq.equals("a")) {
@@ -82,7 +94,7 @@ public class PAMecatronico {
                                 bIzq.paAgregarLanzafuego(lfuego);
                                 paElegidoIzq = true;
                             } else {
-                                System.out.println("La opción no es válida, inténtelo nuevamente.\n");
+                                System.out.println(ROJOD+"La opción no es válida, inténtelo nuevamente.\n"+RESET);
                                 paOption = 4;
                             }
                         }
@@ -90,14 +102,14 @@ public class PAMecatronico {
                     }
                     case 2: {
                         if (paElegidoDer) {
-                            System.out.println("Ya ha elegido el arma derecha.");
+                            System.out.println(GREENC+"Ya ha elegido el arma derecha."+RESET);
                             break;
                         } else {
                             System.out.println("\n");
-                            System.out.println("Armas disponibles para elegir:");
-                            System.out.println("a. MK61 VULCAN");
-                            System.out.println("b. BAZUCA ANTIATAQUE");
-                            System.out.print("Ingrese una opción: ");
+                            System.out.println(BLANCO+"Armas disponibles para elegir:");
+                            System.out.println(AZUL+"a. MK61 VULCAN");
+                            System.out.println(ROJO+"b. BAZUCA ANTIATAQUE");
+                            System.out.print(ROSA+"Ingrese una opción: "+RESET);
                             String optionDer = sc.nextLine();
                             if (optionDer.equals("a")) {
                                 System.out.println(
@@ -110,23 +122,23 @@ public class PAMecatronico {
                                 bDere.agregarBazucaAntiataque(bazuca);
                                 paElegidoDer = true;
                             } else {
-                                System.out.println("La opción no es válida, inténtelo nuevamente.\n");
+                                System.out.println(ROJOD+"La opción no es válida, inténtelo nuevamente.\n"+RESET);
                                 paOption = 4;
                             }
                         }
                         break;
                     }
                     case 3: {
-                        System.out.println("Regresando...");
+                        System.out.println(TURQUESA+"Regresando..."+RESET);
                         paBucle = 1;
                         break;
                     }
                     default:
-                        System.out.println("La opción no es válida, inténtelo de nuevo.\n");
+                        System.out.println(ROJOD+"La opción no es válida, inténtelo de nuevo.\n"+RESET);
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.err.println("Error: Ingrese un número entero válido.");
+                System.err.println(ROJOD+"Error: Ingrese un número entero válido."+RESET);
                 sc.nextLine();
                 paBucle = 0;
             }

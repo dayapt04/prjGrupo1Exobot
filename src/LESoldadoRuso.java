@@ -3,7 +3,6 @@ public class LESoldadoRuso extends LESoldado implements PAIFuentePoder {
     public LESoldadoRuso() {
         super();
         setLeIdSoldado(getLeIdSoldado());
-        paRecargarFuente();
     }
 
     @Override

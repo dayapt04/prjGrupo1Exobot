@@ -54,7 +54,7 @@ public abstract class JSIabot implements JSIIngles, JSIEspanol {
 
     @Override
     public String jsaprenderGramaticaEspanol() {
-        jsConocimientoE.put(2, " Aprendio Gramaticaen Español");
+        jsConocimientoE.put(2, " Aprendio Gramatica en Español");
         return " Aprendiendo Gramatica en Español";
     }
 
