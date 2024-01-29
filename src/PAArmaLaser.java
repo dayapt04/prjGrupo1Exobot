@@ -1,4 +1,4 @@
-public class ArmaLaser implements IFuentePoder {
+public class PAArmaLaser implements PAIFuentePoder {
 
     @Override
     public void recargarFuente() {

@@ -1,4 +1,4 @@
-public interface IFuentePoder {
+public interface PAIFuentePoder {
 
     public void recargarFuente();
 

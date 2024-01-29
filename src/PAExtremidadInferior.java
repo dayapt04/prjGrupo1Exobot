@@ -1,4 +1,4 @@
-public class ExtremidadInferior {
+public class PAExtremidadInferior {
 
     public void correr(int velocidad) {
         System.out.println("[EXOBOT -> POTENCIAR EXTREMIDADES INFERIORES]");

@@ -1,4 +1,4 @@
-public class Lanzafuego implements IFuentePoder {
+public class PALanzafuego implements PAIFuentePoder {
 
     @Override
     public void recargarFuente() {

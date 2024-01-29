@@ -1,4 +1,4 @@
-public class BAntiataque implements IFuentePoder {
+public class PABAntiataque implements PAIFuentePoder {
 
     @Override
     public void recargarFuente() {

@@ -1,7 +1,7 @@
 public class Exobot extends Iabot {
-    public BrazoDerecho bDerecho;
-    public BrazoIzquierdo bIzquierdo;
-    public ExtremidadInferior eInferior;
+    public PABrazoDerecho bDerecho;
+    public PABrazoIzquierdo bIzquierdo;
+    public PAExtremidadInferior eInferior;
     public Turbo turbo;
 
     @Override
@@ -10,9 +10,9 @@ public class Exobot extends Iabot {
     }
 
     public Exobot() {
-        bDerecho = new BrazoDerecho();
-        bIzquierdo = new BrazoIzquierdo();
-        eInferior = new ExtremidadInferior();
+        bDerecho = new PABrazoDerecho();
+        bIzquierdo = new PABrazoIzquierdo();
+        eInferior = new PAExtremidadInferior();
         turbo = new Turbo();
     }
 

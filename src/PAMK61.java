@@ -1,4 +1,4 @@
-public class MK61 implements IFuentePoder {
+public class PAMK61 implements PAIFuentePoder {
 
     @Override
     public void recargarFuente() {

@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Mecatronico {
+public class PAMecatronico {
     private SoldadoRuso soldado;
     private Exobot exobot;
     Scanner sc = new Scanner(System.in);
