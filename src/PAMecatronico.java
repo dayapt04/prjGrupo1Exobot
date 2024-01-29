@@ -5,15 +5,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PAMecatronico {
-    private SoldadoRuso paSoldado;
+    private LESoldadoRuso paSoldado;
     private Exobot paExobot;
     Scanner sc = new Scanner(System.in);
 
-    public SoldadoRuso getSoldado() {
+    public LESoldadoRuso getSoldado() {
         return paSoldado;
     }
 
-    public void setSoldado(SoldadoRuso paSoldado) {
+    public void setSoldado(LESoldadoRuso paSoldado) {
         this.paSoldado = paSoldado;
     }
 
@@ -25,7 +25,7 @@ public class PAMecatronico {
         this.paExobot = paExobot;
     }
 
-    public void paAsignarExobot(SoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
+    public void paAsignarExobot(LESoldadoRuso soldadoAsig, String idSoldado, Exobot exobot) {
         String fileCSV = "dataFile\\asignacionExobot.csv";
         try {
             FileWriter fileWriter = new FileWriter(fileCSV, true);

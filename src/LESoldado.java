@@ -1,30 +1,60 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.security.SecureRandom;
+
 public abstract class LESoldado {
-    private PAExtremidad brazo;
-    private PAExtremidad pierna;
 
-    public PAExtremidad getBrazo() {
-        return brazo;
+    private PAExtremidad leBrazo;
+    private PAExtremidad lePierna;
+
+    public PAExtremidad getLeBrazo() {
+        return leBrazo;
     }
 
-    public void setBrazo(PAExtremidad brazo) {
-        this.brazo = brazo;
+    public void setLeBrazo(PAExtremidad leBrazo) {
+        this.leBrazo = leBrazo;
     }
 
-    public PAExtremidad getPierna() {
-        return pierna;
+    public PAExtremidad getLePierna() {
+        return lePierna;
     }
 
-    public void setPierna(PAExtremidad pierna) {
-        this.pierna = pierna;
+    public void setLePierna(PAExtremidad lePierna) {
+        this.lePierna = lePierna;
     }
 
-    private String idSoladado;
+    private String leIdSoldado;
 
-    public String getIdSoladado() {
-        return idSoladado;
+    public String getLeIdSoldado() {
+        return leIdSoldado;
     }
 
-    public void setIdSoladado(String idSoladado) {
-        this.idSoladado = idSoladado;
+    public void setLeIdSoldado(String leIdSoldado) {
+        SecureRandom random = new SecureRandom();
+        String caracteresValidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+        StringBuilder leIdSoldadoBuilder = new StringBuilder();
+        for (int i = 0; i < 5; i++) {
+            int index = random.nextInt(caracteresValidos.length());
+            leIdSoldadoBuilder.append(caracteresValidos.charAt(index));
+        }
+
+        this.leIdSoldado = leIdSoldadoBuilder.toString();
+
+        guardarDatosEnArchivoCSV();
     }
+
+    protected void guardarDatosEnArchivoCSV() {
+        String archivoCSV = "leIdSoldados.csv";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCSV, true))) {
+            writer.write("id:" + this.leIdSoldado);
+            writer.newLine();
+            System.out.println(" -> Datos guardados correctamente.");
+        } catch (IOException e) {
+            System.err.println("ERROR: Al guardar los datos. ");
+        }
+    }
+
 }

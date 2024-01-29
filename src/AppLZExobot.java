@@ -17,8 +17,8 @@ public class AppLZExobot {
 
     public void LZAppPrincipalExobot() {
         int opcion, opcion2;
-        SoldadoRuso soldadoRuso = new SoldadoRuso();
-        Mecatronico mecha = new Mecatronico();
+        LESoldadoRuso soldadoRuso = new LESoldadoRuso();
+        PAMecatronico mecha = new PAMecatronico();
 
         do {
             System.out.println(BLANCO + "Bienvenido a ExoBot" + RESET);
@@ -37,7 +37,7 @@ public class AppLZExobot {
                     System.out.println();
                     mecha.asignarExobot(soldadoRuso, soldadoRuso.getIdSoldado(), exobot);
                     System.out.println();
-                    mecha.armarExobot();
+                    mecha.paArmarExobot();
                     do {
                         System.out.println(BLANCO + "[E X O B O T]");
                         System.out.println(GRIS + "1. Personalizar Exobot" + AZUL + "\n2. Recargar Fuente" + AZULD
@@ -46,14 +46,14 @@ public class AppLZExobot {
                         opcion2 = sc.nextInt();
                         switch (opcion2) {
                             case 1:
-                                mecha.personalizarExobot(exobot, "ASDQ31");
+                                // mecha.paPersonalizarExobot(exobot, "ASDQ31");
                                 break;
                             case 2:
-                                soldadoRuso.recargarFuente();
+                                soldadoRuso.paRecargarFuente();
                                 break;
 
                             case 3:
-                                soldadoRuso.reemplazarFuente();
+                                soldadoRuso.paReemplazarFuente();
                                 break;
 
                             case 4:
