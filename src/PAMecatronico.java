@@ -64,8 +64,8 @@ public class PAMecatronico {
             try {
                 System.out.println("\n");
                 System.out.println(BLANCO+"\tPERSONALIZAR [E X O B O T]\n");
-                System.out.println(AZUL+"1. Elegir Arsenal Brazo Derecho");
-                System.out.println(ROJO+"2. Elegir Arsenal Brazo Izquierdo");
+                System.out.println(AZUL+"1. Elegir Arsenal brazo izquierdo");
+                System.out.println(ROJO+"2. Elegir Arsenal brazo derecho");
                 System.out.println(ROJOD+"3. Regresar al menú principal");
                 System.out.print(ROSA+"Ingrese una opción: "+RESET);
                 int paOption = sc.nextInt();
@@ -73,7 +73,7 @@ public class PAMecatronico {
                 switch (paOption) {
                     case 1: {
                         if (paElegidoIzq) {
-                            System.out.println(GREENC+"Ya ha elegido el arma izquierda."+RESET);
+                            System.out.println(GREENC+"Ya ha elegido el arma izquierdo."+RESET);
                             break;
                         } else {
                             System.out.println("\n");

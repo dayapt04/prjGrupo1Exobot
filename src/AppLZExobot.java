@@ -29,25 +29,33 @@ public class AppLZExobot {
         PAMecatronico oMecatronico = new PAMecatronico();
 
         do {
-            System.out.println(BLANCO + "Bienvenido a ExoBot" + RESET);
+            System.out.println("--------------------------------------------");
+            System.out.println(BLANCO + "      Bienvenido a ExoBot" + RESET);
+            System.out.println("--------------------------------------------");
             System.out.println(AZUL + "1. Mostrar datos del Soldado" + ROJO + "\n2. Salir " + ROSA
-                    + "\nIngrese una opcion" + RESET);
+            + "\nIngrese una opción:" + RESET);
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    System.out.println();
-                    System.out.println(AZULD + "Bienvenido a ExoBot Soldado, por favor guarde sus datos: " + RESET);
-                    System.out.println(ROJOD + "Su ID es: "+ROSA+soldadoRuso.getLeIdSoldado() + RESET);
-                    System.out.println();
-                    oMecatronico.paAsignarExobot(soldadoRuso, soldadoRuso.getLeIdSoldado(), exobot);
-                    oMecatronico.paArmarExobot();
-                    System.out.println();
-
-                    do {
-                        System.out.println(BLANCO + "[E X O B O T]");
+                System.out.println("***************************************************************");
+                System.out.println(AZULD + "Bienvenido a ExoBot SOLDADO, por favor guarde sus datos: " + RESET);
+                System.out.println(TURQUESA+"            O");
+                System.out.println("           /|\\");
+                System.out.println("           / \\"+RESET);
+                System.out.println(ROJOD + "Su ID es: "+ROSA+soldadoRuso.getLeIdSoldado() + RESET);
+                System.out.println("***************************************************************");
+                System.out.println();
+                oMecatronico.paAsignarExobot(soldadoRuso, soldadoRuso.getLeIdSoldado(), exobot);
+                oMecatronico.paArmarExobot();
+                System.out.println();
+                
+                do {
+                    System.out.println("----------------");
+                    System.out.println(BLANCO + "[E X O B O T]");
+                    System.out.println("----------------");
                         System.out.println(GRIS + "1. Personalizar Exobot" + AZUL + "\n2. Recargar Fuente" + AZULD
                                 + "\n3. Reemplazar Fuente" + ROJO + "\n4. Aprender un idioma" + ROJOD + "\n5. Salir");
-                        System.out.println(ROSA + "Ingrese una opcion" + RESET);
+                        System.out.println(ROSA + "Ingrese una opción:" + RESET);
                         opcion2 = sc.nextInt();
                         switch (opcion2) {
                             case 1:
@@ -79,8 +87,8 @@ public class AppLZExobot {
                                 System.out.println(RESET);
                                 break;
 
-                            case 5:
-                                System.out.println(VIOLETA + "Saliendo del programa..." + RESET);
+                         case 5:
+                                System.out.println(VIOLETA + " -> Saliendo del programa..." + RESET);
                                 break;
                             default:
                                 System.out.println(ROJO + "Opción no valida, intentelo de nuevo." + RESET);
@@ -90,7 +98,7 @@ public class AppLZExobot {
                     System.out.println();
                     break;
                 case 2:
-                    System.out.println(VIOLETA + "Gracias por usar Exobot" + RESET);
+                    System.out.println(VIOLETA + " -> Gracias por usar Exobot" + RESET);
                     System.exit(0);
                     break;
                 default:

@@ -30,38 +30,38 @@ public abstract class JSIabot implements JSIIngles, JSIEspanol {
 
     @Override
     public String jsaprenderFoneticaIngles() {
-        jsConocimientoI.put(1, " Aprendio Fonetica en Ingles");
-        return " Aprendiendo Fonetica en Ingles";
+        jsConocimientoI.put(1, " Aprendió fonética en inglés");
+        return " Aprendiendo fonética en Ingles";
     }
 
     @Override
     public String jsaprenderGramaticaIngles() {
-        jsConocimientoI.put(2, " Aprendio Gramática en Ingles");
-        return " Aprendiendo Gramática en Ingles";
+        jsConocimientoI.put(2, " Aprendió gramática en inglés");
+        return " Aprendiendo gramática en Ingles";
     }
 
     @Override
     public String jsaprenderLexicoIngles() {
-        jsConocimientoI.put(3, " Aprendio Lexico en Ingles");
-        return " Aprendiendo Lexico en Ingles";
+        jsConocimientoI.put(3, " Aprendió léxico en inglés");
+        return " Aprendiendo léxico en Ingles";
     }
 
     @Override
     public String jsaprenderFoneticaEspanol() {
-        jsConocimientoE.put(1, " Aprendio Fonetica en Español");
-        return " Aprendiendo Fonetica en Español ";
+        jsConocimientoE.put(1, " Aprendió fonética en Español");
+        return " Aprendiendo fonética en Español ";
     }
 
     @Override
     public String jsaprenderGramaticaEspanol() {
-        jsConocimientoE.put(2, " Aprendio Gramatica en Español");
-        return " Aprendiendo Gramatica en Español";
+        jsConocimientoE.put(2, " Aprendió gramática en Español");
+        return " Aprendiendo gramática en Español";
     }
 
     @Override
     public String jsaprenderLexicoEspanol() {
-        jsConocimientoE.put(3, " Aprendio Lexico en Español");
-        return " Aprendiendo Lexico en español";
+        jsConocimientoE.put(3, " Aprendió léxico en Español");
+        return " Aprendiendo léxico en Español";
     }
 
     public void jsConocimientoIngles() {
