@@ -1,6 +1,6 @@
 import java.security.SecureRandom;
 
-public abstract class JSIabot {
+public class JSIabot {
 
     private String idExobot;
 
@@ -23,10 +23,11 @@ public abstract class JSIabot {
         }
         return builder.toString().toUpperCase();
     }
-    //----------
-    public void aprenderIngles(){}
 
-    public void aprenderEspanol(){}
-    //--------
+    public void aprenderIngles() {
+    }
+
+    public void aprenderEspanol() {
+    }
 
 }

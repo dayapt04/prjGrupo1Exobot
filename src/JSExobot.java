@@ -1,22 +1,19 @@
 import java.util.Hashtable;
 
 public class JSExobot extends JSIabot implements JSIEspanol, JSIIngles {
-    
+
     public PABrazoDerecho bDerecho;
     public PABrazoIzquierdo bIzquierdo;
     public PAExtremidadInferior eInferior;
     public PATurbo turbo;
 
-    //----
-    
-    public JSExobot(PATurbo turbo) {
+    public JSExobot() {
         bDerecho = new PABrazoDerecho();
         bIzquierdo = new PABrazoIzquierdo();
         eInferior = new PAExtremidadInferior();
-        //turbo = new PATurbo();
+        turbo = new PATurbo();
     }
 
-    //-------
     Hashtable<Integer, String> jsConocimientoI = new Hashtable<>();
     Hashtable<Integer, String> jsConocimientoE = new Hashtable<>();
 
@@ -70,24 +67,19 @@ public class JSExobot extends JSIabot implements JSIEspanol, JSIIngles {
         });
     }
 
-    //metodo heredado de iabot
-    
     @Override
-    public void aprenderEspanol(){
+    public void aprenderEspanol() {
         System.out.println(" - El exobot ahora tiene conocimientos del idioma español.");
     }
 
     @Override
-    public void aprenderIngles(){
+    public void aprenderIngles() {
         System.out.println(" - El exobot ahora tiene conocimientos del idioma inglés.");
     }
-
-    //---------------------------
 
     @Override
     public String generarCodigo() {
         return super.generarCodigo();
     }
-
 
 }
